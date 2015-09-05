@@ -40,16 +40,12 @@ int main(int argc, char * argv[])
 {
 	
 	vector<string> v;
-	for (int i = 0; i<argc; ++i)
-	{
-		for (int j = 0; argv[j] != '\0';j++)
-			v.push_back(argv[j]);
-	}
+	for (int i = 0; i<argc; ++i)   //get command lines
+		v.push_back(argv[i]);
 
-	for (int k = 0; k < v.size(); k++)
-	{
+	for (int k = 0; k < v.size(); k++)  //print out command lines
 		cout << v[k] << endl;
-	}
+	
 	return 0;
 }
 
