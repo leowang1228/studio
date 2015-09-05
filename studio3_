@@ -83,3 +83,40 @@ yuchili
 chenwang
 (2) All of the command line arguement appeared in the output.//
 *********************************************************************
+//Q5:
+
+#include "stdafx.h"
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstring>
+#include <sstream>
+
+using namespace std;
+
+
+int main(int argc, char * argv[])
+{
+	if (argc!=3)
+	{
+		cout<<argv[0]<<" "<<"allows you to enter only two command lines, please try again"<<endl;
+		//cout<<argc;
+		return 1;
+	}
+	else
+		for (int i=1;i<argc;i++)
+			cout<<argv[i]<<endl;
+	return 0;
+}
+
+//anwsers:
+(1) 1 additional command line:
+project3_5.exe allows you to enter only two command lines, please try again
+returned value: 1
+(2) 2 additional command lines:
+project3_5.exe yuchili chenwang
+returned value: 0
+(3) 3 additional command lines:
+project3_5.exe allows you to enter only two command lines, please try again
+returned value: 1//
+********************************************************************************
