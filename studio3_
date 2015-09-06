@@ -147,30 +147,51 @@ using namespace std;
 
 int main(int argc, char * argv[])
 {
+	
+	if (argc==3)
+	{ 
 	ifstream ifs;
 	string in = argv[1];
-	
-	ifs.open(in.c_str()); 
-	if (ifs.is_open())
-	
-		cout <<  " yes" << endl;
-	else 	cout << "no" << endl;
-	
-	
+	in += ".txt";
+	ifs.open(in.c_str());
+	if (!ifs.is_open())
+		cout << argv[1] << " is not open successfully" << endl;
+
+
+
 	ofstream ofs;
 	string out = argv[2];
 	
+	 out+= ".txt";
 	ofs.open(out.c_str());
+
+	if(!ofs.is_open())
+		cout << argv[2] << " is not open successfully" << endl;
 	
-	if (ifs.is_open() && ofs.is_open())
-          cout << "ok" << endl;
-	else cout << "not ok" << endl;
-	
+	if (ifs.is_open()
+		&& ofs.is_open())
+	{
+		string line,word;
+		while (getline(ifs, line))
+		{
+			istringstream iss(line);
+			iss >> word;
+		    ofs << word<<" ";
+		}
+		
+		
+	}
+
 
 	ifs.close();
 	ofs.close();
 
+	}
 
+	else
+	{
+		return -1;
+	}
 	
 	return 0;
 }
