@@ -127,3 +127,50 @@ returned value: 1//
 //Some insights on how to create and name a file:
 http://www.cplusplus.com/forum/beginner/9396/
 //
+
+*****************************************************************************
+
+// Q6:
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstring>
+#include <sstream>
+
+#include <fstream>
+
+using namespace std;
+
+
+int main(int argc, char * argv[])
+{
+	ifstream ifs;
+	string in = argv[1];
+	
+	ifs.open(in.c_str()); 
+	if (ifs.is_open())
+	
+		cout <<  " yes" << endl;
+	else 	cout << "no" << endl;
+	
+	
+	ofstream ofs;
+	string out = argv[2];
+	
+	ofs.open(out.c_str());
+	
+	if (ifs.is_open() && ofs.is_open())
+          cout << "ok" << endl;
+	else cout << "not ok" << endl;
+	
+
+	ifs.close();
+	ofs.close();
+
+
+	
+	return 0;
+}
