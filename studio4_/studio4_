@@ -3,3 +3,20 @@
 //The output is: the value calculated is 27
 ****************************************************
 //Q3:
+
+/*
+variable 'result' in the 'parse_and_compute' function: 8-->9-->10; 
+argv[current_index]: '+'-->'8'-->'+'-->'9'-->'10';
+first_operand: 0-->8
+second_operand: 0-->19
+value: 0-->27
+*/
+******************************************************
+//Q4:
+
+/*
+"+9 10" printed out the value 19, and "+8 +9" results in an error message and says:  "caught exeption integer 2"
+*/
+**************************************************************
+//Q5:
+
