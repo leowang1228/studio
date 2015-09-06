@@ -25,3 +25,7 @@ on the second '+' sign, when it comes to the second operand, the current_index i
 prints out an error. which means that the function 'parse_and_compute' is always expecting a second operand, so if there is none 
 of that, the program will comes to an error.
 */
+**************************************************************
+//Q6:
+
+
