@@ -20,3 +20,8 @@ value: 0-->27
 **************************************************************
 //Q5:
 
+/*
+on the second '+' sign, when it comes to the second operand, the current_index is larger than the last_index, so the program 
+prints out an error. which means that the function 'parse_and_compute' is always expecting a second operand, so if there is none 
+of that, the program will comes to an error.
+*/
