@@ -148,45 +148,40 @@ using namespace std;
 int main(int argc, char * argv[])
 {
 	
-	if (argc==3)
+	if (argc==3)   //check number of inputs
 	{ 
-	ifstream ifs;
-	string in = argv[1];
-	in += ".txt";
-	ifs.open(in.c_str());
-	if (!ifs.is_open())
-		cout << argv[1] << " is not open successfully" << endl;
+		ifstream ifs;
+		string in = argv[1];
+		in += ".txt";
+		ifs.open(in.c_str());
+		if (!ifs.is_open())             //test whether ifs is open
+			cout << argv[1] << " is not open successfully" << endl;
 
 
-
-	ofstream ofs;
-	string out = argv[2];
+		ofstream ofs;
+		string out = argv[2];
 	
-	 out+= ".txt";
-	ofs.open(out.c_str());
+		out+= ".txt";
+		ofs.open(out.c_str());
 
-	if(!ofs.is_open())
-		cout << argv[2] << " is not open successfully" << endl;
+		if(!ofs.is_open())            //test whether ofs is open
+			cout << argv[2] << " is not open successfully" << endl;
 	
-	if (ifs.is_open()
-		&& ofs.is_open())
-	{
-		string line,word;
-		while (getline(ifs, line))
+		if (ifs.is_open() && ofs.is_open())     //read and write lines
 		{
-			istringstream iss(line);
-			iss >> word;
-		    ofs << word<<" ";
-		}
-		
-		
-	}
+			string line,word;
+			while (getline(ifs, line))
+			{
+				istringstream iss(line);
+				iss >> word;
+		    	ofs << word<<" ";
+			}
+		} 
 
 
-	ifs.close();
-	ofs.close();
-
-	}
+		ifs.close();
+		ofs.close();
+		}  //end if
 
 	else
 	{
