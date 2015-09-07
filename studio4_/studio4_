@@ -28,4 +28,18 @@ of that, the program will comes to an error.
 **************************************************************
 //Q6:
 
+Ans:
+(1)change the starting index from 1 to 2.
 
+   const int starting_index = 2;  //used to be: const int starting_index = 1;
+   
+   the output is "8".
+   the program could not find the "+" at the current_index, so the parse_and_compute could not return any possible result.
+   then, the final result would be the integer at current_index, which was 8.
+   
+(2) passing the current index by value rather than by reference
+    int parse_and_compute (int current_index, int last_index, char *argv[]) {    //used to be: int & current_index
+    the output is "16".
+    
+    After the recursion finish the first cycling, the current_index is still 2, while it should have been increased to 3 
+    if we use reference as its varible type. Thus, the argv[2] (which is 8) is counted twice.
