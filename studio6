@@ -1,0 +1,98 @@
+// Function Statement.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+//#include "function_statement.h"
+#include <iostream>
+
+using namespace std;
+
+//int _tmain(int argc, _TCHAR* argv[])
+//question 3
+/*
+int main(int argc, char * argv[])
+{
+	int val;
+	cout<<"please enter a number:";
+	cin>>val;
+	int ans=factorial(val);
+	cout <<"the value you entered is: "<<val<<endl;
+	cout<<"the value you get is: "<<ans<<endl;
+	return 0;
+}
+
+int factorial(int val)
+{
+	for(int i=val-1; i>0; i--)
+		val=val*i;
+	return val;
+}
+*/
+
+//question 4
+/*
+int main(int argc, char * argv[])
+{
+	unsigned int val, result;
+	cout<<"please enter a number:";
+	cin>>val;
+	result=val;
+	cout<<"the value you entered is: "<<val<<endl;
+	val--;
+	for(;val>0;val--)
+		factorial(val,result);
+	cout<<"the value you get is: "<<result<<endl;
+	return 0;
+}
+
+void factorial(unsigned int val,unsigned int &result)
+{
+	result*=val;
+}
+*/
+
+//question 5
+/*
+int main(int argc, char * argv[])
+{
+	unsigned int val, result;
+	cout<<"please enter a number:";
+	cin>>val;
+	result=val;
+	cout<<"the value you entered is: "<<val<<endl;
+	val--;
+	for(;val>0;val--)
+		factorial(val,&result);
+	cout<< "the value you get is: "<<result<<endl;
+	return 0;
+}
+
+void factorial(unsigned int val,unsigned int * result)
+{
+	*result*=val;
+}
+*/
+
+//
+//question 5
+unsigned int get_expo(unsigned int base, unsigned int exponent=2);
+int main(int argc, char * argv[])
+{
+	unsigned int base, exponent;
+	cout<<"enter the base:";
+	cin>>base;
+	//cout<<"enter the exponent:";
+	//cin>>exponent;
+	unsigned int result=get_expo(base);
+	cout<<"the result you get is: "<<result<<endl;
+	return 0;
+}
+
+unsigned int get_expo(unsigned int base, unsigned int exponent)
+{
+	unsigned int res;
+	res=base;
+	for (;exponent-1>0;exponent--)
+		res*=base;
+	return res;
+}
