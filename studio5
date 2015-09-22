@@ -1,0 +1,26 @@
+// Statement Studio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void foo();
+//int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char * argv[])
+{
+	try{foo();}
+	catch(char *i){
+		cout<<i;
+		return 1;
+	}
+}
+
+void foo()
+{
+	char *i="world";
+	throw i;
+}
+
